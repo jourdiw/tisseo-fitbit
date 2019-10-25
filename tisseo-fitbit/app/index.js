@@ -1,7 +1,7 @@
 import * as messaging from "messaging";
-import { BartUI } from "./ui.js";
+import { TisseoUI } from "./ui.js";
 
-let ui = new BartUI();
+let ui = new TisseoUI();
 
 ui.updateUI("disconnected");
 

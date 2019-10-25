@@ -2,7 +2,7 @@ import { me } from "companion";
 import * as messaging from "messaging";
 import { settingsStorage } from "settings";
 
-import { BartAPI } from "./bart.js"
+import { TisseoAPI } from "./tisseo.js"
 import { TRAIN_COUNT, FAVORITE_STATION_SETTING } from "../common/globals.js";
 
 settingsStorage.onchange = function(evt) {
@@ -33,13 +33,13 @@ function sendBartSchedule() {
   }
  
   if (!station || typeof(station) !== "object" || station.length < 1 || typeof(station[0]) !== "object") {
-    station = { code: "embr", direction: "s" };
+    station = { stop_id: "3377699720881992" };
   }
   else {
     station = station[0].value;
   }
-  let bartApi = new BartAPI();
-  bartApi.realTimeDepartures(station.code, station.direction).then(function(departures) {
+  let tisseoApi = new TisseoAPI();
+  tisseoApi.realTimeDepartures(station.stop_id).then(function(departures) {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       // Limit results to the number of tiles available in firmware
       departures.splice(TRAIN_COUNT, departures.length);

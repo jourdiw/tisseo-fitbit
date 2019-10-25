@@ -1,7 +1,7 @@
 {
   "fitbit": {
     "appType": "app",
-    "appDisplayName": "BART",
+    "appDisplayName": "My54",
     "iconFile": "resources/icon.png",
     "wipeColor": "#f44336",
     "requestedPermissions": [
@@ -13,7 +13,7 @@
     ],
     "i18n": {
       "en": {
-        "name": "BART"
+        "name": "My54"
       }
     }
   }

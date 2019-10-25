@@ -1,3 +1,7 @@
+An app for checking when my favorite bus is coming to take me to Centre-ville.
+
+## Based upon...
+
 # Bay Area Rapid Transit (BART)
 
 Fitbit SDK example application which downloads real-time BART data and show

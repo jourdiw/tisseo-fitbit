@@ -1,16 +1,12 @@
 import { STATIONS } from "../common/globals.js"
 
-console.log("Opening BART Settings page");
+console.log("Opening Tisseo Settings page");
 
 let autoValues = [];
 for (let key in STATIONS) {
   autoValues.push( {
-    "name": STATIONS[key] + " Northbound",
+    "name": STATIONS[key],
     "value": { code: key, direction: "n" }
-  } );
-  autoValues.push( {
-    "name": STATIONS[key] + " Southbound",
-    "value": { code: key, direction: "s" }
   } );
 }
 
@@ -18,14 +14,14 @@ function mySettings(props) {
   return (
     <Page>
       <Section
-        title={<Text bold align="center">Bart Schedule</Text>}>
+        title={<Text bold align="center">Tisseo Schedule</Text>}>
         <AdditiveList
           title="Select your favorite stations"
           settingsKey="favorite_station_setting"
           maxItems="5"
           addAction={
             <TextInput
-              title="Add a Bart Station"
+              title="Add a Tisseo Station"
               label="Name"
               placeholder="Type something"
               action="Add Station"

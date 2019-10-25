@@ -10,12 +10,6 @@
     <!-- line 2: time in minutes, platform and bike or no bike icon -->
     <text id="minutes"  x="5"   y="78" font-size="30" fill="white">42 minutes</text>
     <text id="platform" x="100%-120" y="78" font-size="30" fill="grey">X</text>
-
-    <use id="bike" href="#static-image" x="100%-84" y="37" height="47"
-    width="80">
-      <set href="image" attributeName="href" to="nobike.png"/>
-    </use>
-
     <rect id="tile-divider-bottom" height="2" />
   </symbol>
 

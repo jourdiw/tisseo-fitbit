@@ -1,7 +1,7 @@
 import { TRAIN_COUNT, STATIONS } from "../common/globals.js";
 import document from "document";
 
-export function BartUI() {
+export function TisseoUI() {
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
 
@@ -14,7 +14,7 @@ export function BartUI() {
   }
 }
 
-BartUI.prototype.updateUI = function(state, departures) {
+TisseoUI.prototype.updateUI = function(state, departures) {
   if (state === "loaded") {
     this.trainList.style.display = "inline";
     this.statusText.text = "";
