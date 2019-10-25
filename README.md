@@ -1,5 +1,7 @@
 An app for checking when my favorite bus is coming to take me to Centre-ville.
 
+To develop, use the Fitbit Studio SDK version 3.1 for Fitbit Versa Lite. Then use the Fitbit OS Simulator to run the code... However it may be more effective for versioning to use the CLI.
+
 ## Based upon...
 
 # Bay Area Rapid Transit (BART)

@@ -1,6 +1,8 @@
 import { TRAIN_COUNT, STATIONS } from "../common/globals.js";
 import document from "document";
 
+// TODO: fix train.to .... it is currently undefined.
+
 export function TisseoUI() {
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
@@ -36,7 +38,7 @@ TisseoUI.prototype.updateUI = function(state, departures) {
   }
 }
 
-BartUI.prototype.updateDepartureList = function(departures) {
+TisseoUI.prototype.updateDepartureList = function(departures) {
   for (let i = 0; i < TRAIN_COUNT; i++) {
     let tile = this.tiles[i];
     if (!tile) {
